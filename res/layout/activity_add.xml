@@ -1,0 +1,112 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:background="#EAEAEA"
+    	android:layout_height="match_parent">
+<RelativeLayout
+    android:background="#EAEAEA" 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText 
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="wrap_content"
+        android:maxLines="4"
+        android:lines="2"
+        android:textColor="#006699"
+        android:hint="WHAT"
+        android:layout_width="match_parent"
+        android:id="@+id/etWhat"/>
+    
+    <EditText 
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="wrap_content"
+        android:maxLines="4"
+        android:lines="2"
+        android:layout_below="@+id/etWhat"
+        android:textColor="#993300"
+        android:hint="WHY"
+        android:layout_width="match_parent"
+        android:id="@+id/etWhy"/>
+    
+    <EditText 
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="wrap_content"
+        android:maxLines="4"
+        android:lines="2"
+        android:layout_below="@+id/etWhy"
+        android:textColor="#009900"
+        android:hint="WHERE"
+        android:layout_width="match_parent"
+        android:id="@+id/etWhere"/>
+    
+    <EditText 
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="wrap_content"
+        android:maxLines="4"
+        android:lines="2"
+        android:layout_below="@+id/etWhere"
+        android:textColor="#CC9933"
+        android:hint="WHEN"
+        android:layout_width="match_parent"
+        android:id="@+id/etWhen"/>
+    
+    <EditText 
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="wrap_content"
+        android:maxLines="4"
+        android:lines="2"
+        android:layout_below="@+id/etWhen"
+        android:textColor="#333333"
+        android:hint="WHO"
+        android:layout_width="match_parent"
+        android:id="@+id/etWho"/>
+
+    <EditText 
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="wrap_content"
+        android:maxLines="4"
+        android:lines="2"
+        android:layout_below="@+id/etWho"
+        android:textColor="#999999"
+        android:hint="HOW"
+        android:layout_width="match_parent"
+        android:id="@+id/etHow"/>
+    
+    <EditText 
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="wrap_content"
+        android:maxLines="4"        
+        android:lines="2"
+        android:layout_below="@+id/etHow"
+        android:textColor="#990066"
+        android:hint="HOW MUCH"
+        android:layout_width="match_parent"
+        android:id="@+id/etHowMuch"/>
+    
+    <ImageButton
+        android:layout_below="@+id/etHowMuch"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"        
+        android:background="@drawable/selector_add"
+        android:src="@drawable/selector_add"
+        android:layout_height="wrap_content" 
+        android:layout_width="wrap_content"
+        android:id="@+id/btnAdd"/>
+    
+</RelativeLayout>
+</ScrollView>

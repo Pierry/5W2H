@@ -1,0 +1,26 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#EAEAEA"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:src="@drawable/logo"
+        android:background="@drawable/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:id="@+id/ivLogo"/>
+    
+    <ImageButton 
+        android:src="@drawable/selector_login"
+        android:background="@drawable/selector_login"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivLogo"
+        android:layout_marginTop="40dp"
+        android:layout_width="wrap_content"
+        android:id="@+id/btnLogin"/>
+    
+</RelativeLayout>

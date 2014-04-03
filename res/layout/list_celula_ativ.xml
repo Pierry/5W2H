@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EAEAEA"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/ivFundo"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/branco"
+        android:src="@drawable/branco" />
+
+    <TextView
+        android:id="@+id/tvWhat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="19dp"
+        android:text="WHAT"
+        android:textColor="#006699"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/ivLinha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvWhat"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="9dp"
+        android:background="@drawable/linha"
+        android:src="@drawable/linha" />
+
+    <TextView
+        android:id="@+id/tvWhatText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivLinha"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:maxLines="2"
+        android:text="Exemplo de texto" />
+
+    <TextView
+        android:id="@+id/tvWhere"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvWhatText"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="26dp"
+        android:text="WHERE"
+        android:textColor="#009900"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/ivLinha2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvWhere"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="9dp"
+        android:background="@drawable/linha"
+        android:src="@drawable/linha" />
+
+    <TextView
+        android:id="@+id/tvWhereText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivLinha2"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:maxLines="2"
+        android:text="Exemplo de texto" />
+
+</RelativeLayout>

@@ -1,0 +1,315 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EAEAEA" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EAEAEA" >
+
+        <ImageView
+            android:id="@+id/ivFundoWhat"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/branco"
+            android:src="@drawable/branco" />
+
+        <TextView
+            android:id="@+id/tvWhat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:text="WHAT"
+            android:textColor="#006699" />
+
+        <ImageView
+            android:id="@+id/ivLinhaWhat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvWhat"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/linha"
+            android:src="@drawable/linha" />
+
+        <TextView
+            android:id="@+id/tvWhatTexto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivLinhaWhat"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:lines="4"
+            android:text="Exemplo" />
+
+        <ImageView
+            android:id="@+id/ivFundoWhy"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_below="@+id/ivFundoWhat"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/branco"
+            android:src="@drawable/branco" />
+
+        <TextView
+            android:id="@+id/tvWhy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivFundoWhat"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:text="WHY"
+            android:textColor="#993300" />
+
+        <ImageView
+            android:id="@+id/ivLinhaWhy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvWhy"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/linha"
+            android:src="@drawable/linha" />
+
+        <TextView
+            android:id="@+id/tvWhyTexto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivLinhaWhy"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:lines="4"
+            android:text="Exemplo" />
+
+        <ImageView
+            android:id="@+id/ivFundoWhere"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_below="@+id/ivFundoWhy"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/branco"
+            android:src="@drawable/branco" />
+
+        <TextView
+            android:id="@+id/tvWhere"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivFundoWhy"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:text="WHERE"
+            android:textColor="#009900" />
+
+        <ImageView
+            android:id="@+id/ivLinhaWhere"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvWhere"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/linha"
+            android:src="@drawable/linha" />
+
+        <TextView
+            android:id="@+id/tvWhereTexto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivLinhaWhere"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:lines="4"
+            android:text="Exemplo" />
+
+        <ImageView
+            android:id="@+id/ivFundoWhen"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_below="@+id/ivFundoWhere"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/branco"
+            android:src="@drawable/branco" />
+
+        <TextView
+            android:id="@+id/tvWhen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivFundoWhere"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:text="WHEN"
+            android:textColor="#CC9933" />
+
+        <ImageView
+            android:id="@+id/ivLinhaWhen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvWhen"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/linha"
+            android:src="@drawable/linha" />
+
+        <TextView
+            android:id="@+id/tvWhenTexto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivLinhaWhen"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:lines="4"
+            android:text="Exemplo" />
+        
+                <ImageView
+        android:id="@+id/ivFundoWho"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_below="@+id/ivFundoWhen"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/branco"
+        android:src="@drawable/branco" />
+
+    <TextView
+        android:id="@+id/tvWho"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/ivFundoWhen"
+        android:text="WHO"
+        android:textColor="#333333" />
+
+    <ImageView
+        android:id="@+id/ivLinhaWho"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvWho"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/linha"
+        android:src="@drawable/linha" />
+    
+            <TextView
+        android:id="@+id/tvWhoTexto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:lines="4"
+        android:layout_below="@+id/ivLinhaWho"
+        android:layout_marginTop="15dp"
+        android:text="Exemplo" />
+    
+            
+                    <ImageView
+        android:id="@+id/ivFundoHow"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_below="@+id/ivFundoWho"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/branco"
+        android:src="@drawable/branco" />
+
+    <TextView
+        android:id="@+id/tvHow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/ivFundoWho"
+        android:text="HOW"
+        android:textColor="#999999" />
+
+    <ImageView
+        android:id="@+id/ivLinhaHow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvHow"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/linha"
+        android:src="@drawable/linha" />
+    
+            <TextView
+        android:id="@+id/tvHowTexto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:lines="4"
+        android:layout_below="@+id/ivLinhaHow"
+        android:layout_marginTop="15dp"
+        android:text="Exemplo" />
+    
+            
+                    <ImageView
+        android:id="@+id/ivFundoHowMuch"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_below="@+id/ivFundoHow"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/branco"
+        android:src="@drawable/branco" />
+
+    <TextView
+        android:id="@+id/tvHowMuch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/ivFundoHow"
+        android:text="HOW MUCH"
+        android:textColor="#990066" />
+
+    <ImageView
+        android:id="@+id/ivLinhaHowMuch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvHowMuch"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/linha"
+        android:src="@drawable/linha" />
+    
+            <TextView
+        android:id="@+id/tvHowMuchTexto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:lines="4"
+        android:layout_below="@+id/ivLinhaHowMuch"
+        android:layout_marginTop="15dp"
+        android:text="Exemplo" />
+    
+    </RelativeLayout>
+
+</ScrollView>
