@@ -1,11 +1,8 @@
 package view;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
-import model.Atividade;
+import model.AtividadeModel;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
@@ -13,7 +10,6 @@ import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ListView;
-import android.widget.SimpleAdapter;
 import br.com.pierry.w2h.R;
 
 import com.googlecode.androidannotations.annotations.Background;
@@ -22,7 +18,9 @@ import com.googlecode.androidannotations.annotations.ItemClick;
 import com.googlecode.androidannotations.annotations.ItemLongClick;
 import com.googlecode.androidannotations.annotations.UiThread;
 import com.googlecode.androidannotations.annotations.ViewById;
+import com.nhaarman.listviewanimations.swinginadapters.prepared.SwingBottomInAnimationAdapter;
 
+import controller.GoogleCardsAdapter;
 import dao.DAOAtividade;
 
 @EActivity(R.layout.activity_principal)
@@ -31,9 +29,11 @@ public class PrincipalActivity extends UtilActionBarActivity {
 	@ViewById
 	ListView lvAtiv;
 
-	private List<Atividade> listAtividade;
+	private List<AtividadeModel> listAtividade;
 	private DAOAtividade dao;
 	private Bundle bundle;
+
+	private GoogleCardsAdapter mGoogleCardsAdapter;
 
 	@Override
 	public void onCreate(Bundle bundle) {
@@ -48,21 +48,16 @@ public class PrincipalActivity extends UtilActionBarActivity {
 	}
 
 	@Background
-	public void getListView(final ProgressDialog dialog) {
-		List<Map<String, String>> events = new ArrayList<Map<String, String>>();
-		events = populateList();
-		dialog.dismiss();
-		if (events == null) {
-
+	public void getListView(ProgressDialog dialog) {
+		listAtividade = populateList();
+		if (listAtividade == null) {
+			dialog.dismiss();
+		} else if (listAtividade.size() == 0) {
+			dialog.dismiss();
 		} else {
-			int[] to = { R.id.tvWhatText, R.id.tvWhereText };
-			String[] from = { "What", "Where" };
-
-			SimpleAdapter adapter = new SimpleAdapter(this, events,
-					R.layout.list_celula_ativ, from, to);
-			this.setAdapterList(adapter);
+			this.setAdapterList(listAtividade);
+			dialog.dismiss();
 		}
-
 	}
 
 	@ItemClick
@@ -96,27 +91,19 @@ public class PrincipalActivity extends UtilActionBarActivity {
 	}
 
 	@UiThread
-	public void setAdapterList(final SimpleAdapter adapter) {
-		lvAtiv.setAdapter(adapter);
+	public void setAdapterList(List<AtividadeModel> models) {
+		mGoogleCardsAdapter = new GoogleCardsAdapter(this, models);
+		SwingBottomInAnimationAdapter swing = new SwingBottomInAnimationAdapter(mGoogleCardsAdapter);
+		swing.setAbsListView(lvAtiv);
+		lvAtiv.setAdapter(swing);
 	}
 
-	public List<Map<String, String>> populateList() {
+	public List<AtividadeModel> populateList() {
 		listAtividade = dao.Select();
 		if (listAtividade == null) {
 			return null;
 		}
-		List<Map<String, String>> list = new ArrayList<Map<String, String>>();
-		for (int i = 0; i < 10; i++) {
-			try {
-				Map<String, String> m = new HashMap<String, String>();
-				m.put("What", listAtividade.get(i).getWhat());
-				m.put("Where", listAtividade.get(i).getWhere());
-				list.add(m);
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-		}
-		return list;
+		return listAtividade;
 	}
 
 }

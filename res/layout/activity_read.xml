@@ -47,7 +47,8 @@
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             android:layout_marginTop="15dp"
-            android:lines="4"
+            android:textSize="20sp"
+            android:lines="3"
             android:text="Exemplo" />
 
         <ImageView

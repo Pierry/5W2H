@@ -1,14 +1,16 @@
 package view;
 
-import model.Atividade;
+import model.AtividadeModel;
+import utils.TypeFace;
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import br.com.pierry.w2h.R;
 
+import com.beardedhen.androidbootstrap.BootstrapEditText;
 import com.googlecode.androidannotations.annotations.Click;
 import com.googlecode.androidannotations.annotations.EActivity;
+import com.googlecode.androidannotations.annotations.UiThread;
 import com.googlecode.androidannotations.annotations.ViewById;
 
 import dao.DAOAtividade;
@@ -19,25 +21,25 @@ import de.keyboardsurfer.android.widget.crouton.Style;
 public class AddActivity extends UtilActionBarActivity {
 	
 	@ViewById
-	EditText etWhat;
+	BootstrapEditText etWhat;
 	
 	@ViewById
-	EditText etWhy;
+	BootstrapEditText etWhy;
 	
 	@ViewById
-	EditText etWhere;
+	BootstrapEditText etWhere;
 	
 	@ViewById
-	EditText etWhen;
+	BootstrapEditText etWhen;
 	
 	@ViewById
-	EditText etWho;
+	BootstrapEditText etWho;
 	
 	@ViewById
-	EditText etHow;
+	BootstrapEditText etHow;
 	
 	@ViewById
-	EditText etHowMuch;
+	BootstrapEditText etHowMuch;
 	
 	@ViewById
 	ImageButton btnAdd;
@@ -49,6 +51,7 @@ public class AddActivity extends UtilActionBarActivity {
 		super.onCreate(bundle);
 		getSupportActionBar().setTitle("Adicionar");
 		dao = new DAOAtividade(this);
+		this.alterarFontes();
 	}
 	
 	public void conferirCampos(){
@@ -74,7 +77,7 @@ public class AddActivity extends UtilActionBarActivity {
 		
 		conferirCampos();
 		
-		Atividade ativ = new Atividade();
+		AtividadeModel ativ = new AtividadeModel();
 		
 		ativ.setWhat(etWhat.getText().toString());
 		ativ.setWhy(etWhy.getText().toString());
@@ -93,5 +96,16 @@ public class AddActivity extends UtilActionBarActivity {
 		Crouton.makeText(this, "Erro ao adicionar!", Style.ALERT).show();
 	}
 	
+	@UiThread
+	public void alterarFontes(){
+		TypeFace face = new TypeFace(this);
+		etHow.setTypeface(face.getFace());
+		etHowMuch.setTypeface(face.getFace());
+		etWhat.setTypeface(face.getFace());
+		etWhen.setTypeface(face.getFace());
+		etWhere.setTypeface(face.getFace());
+		etWho.setTypeface(face.getFace());
+		etWhy.setTypeface(face.getFace());
+	}
 		
 }

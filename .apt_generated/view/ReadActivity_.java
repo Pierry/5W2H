@@ -36,13 +36,20 @@ public final class ReadActivity_
     }
 
     private void afterSetContentView_() {
-        tvWhoTexto = ((TextView) findViewById(id.tvWhoTexto));
-        tvWhereTexto = ((TextView) findViewById(id.tvWhereTexto));
         tvHowMuchTexto = ((TextView) findViewById(id.tvHowMuchTexto));
-        tvHowTexto = ((TextView) findViewById(id.tvHowTexto));
+        tvHowMuch = ((TextView) findViewById(id.tvHowMuch));
+        tvWhoTexto = ((TextView) findViewById(id.tvWhoTexto));
+        tvWhat = ((TextView) findViewById(id.tvWhat));
         tvWhatTexto = ((TextView) findViewById(id.tvWhatTexto));
-        tvWhenTexto = ((TextView) findViewById(id.tvWhenTexto));
+        tvWhere = ((TextView) findViewById(id.tvWhere));
+        tvWho = ((TextView) findViewById(id.tvWho));
         tvWhyTexto = ((TextView) findViewById(id.tvWhyTexto));
+        tvWhy = ((TextView) findViewById(id.tvWhy));
+        tvHowTexto = ((TextView) findViewById(id.tvHowTexto));
+        tvWhereTexto = ((TextView) findViewById(id.tvWhereTexto));
+        tvWhen = ((TextView) findViewById(id.tvWhen));
+        tvWhenTexto = ((TextView) findViewById(id.tvWhenTexto));
+        tvHow = ((TextView) findViewById(id.tvHow));
     }
 
     @Override
@@ -73,6 +80,24 @@ public final class ReadActivity_
 
     public static ReadActivity_.IntentBuilder_ intent(Context context) {
         return new ReadActivity_.IntentBuilder_(context);
+    }
+
+    @Override
+    public void alterarFontes() {
+        handler_.post(new Runnable() {
+
+
+            @Override
+            public void run() {
+                try {
+                    ReadActivity_.super.alterarFontes();
+                } catch (RuntimeException e) {
+                    Log.e("ReadActivity_", "A runtime exception was thrown while executing code in a runnable", e);
+                }
+            }
+
+        }
+        );
     }
 
     @Override

@@ -5,6 +5,7 @@
 
 package view;
 
+import java.util.List;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -19,10 +20,10 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.ListView;
-import android.widget.SimpleAdapter;
 import br.com.pierry.w2h.R.layout;
 import com.googlecode.androidannotations.api.BackgroundExecutor;
 import com.googlecode.androidannotations.api.SdkVersionHelper;
+import model.AtividadeModel;
 
 public final class PrincipalActivity_
     extends PrincipalActivity
@@ -106,14 +107,14 @@ public final class PrincipalActivity_
     }
 
     @Override
-    public void setAdapterList(final SimpleAdapter adapter) {
+    public void setAdapterList(final List<AtividadeModel> models) {
         handler_.post(new Runnable() {
 
 
             @Override
             public void run() {
                 try {
-                    PrincipalActivity_.super.setAdapterList(adapter);
+                    PrincipalActivity_.super.setAdapterList(models);
                 } catch (RuntimeException e) {
                     Log.e("PrincipalActivity_", "A runtime exception was thrown while executing code in a runnable", e);
                 }

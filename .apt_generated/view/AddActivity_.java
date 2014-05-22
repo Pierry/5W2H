@@ -9,20 +9,23 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup.LayoutParams;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import br.com.pierry.w2h.R.id;
 import br.com.pierry.w2h.R.layout;
+import com.beardedhen.androidbootstrap.BootstrapEditText;
 import com.googlecode.androidannotations.api.SdkVersionHelper;
 
 public final class AddActivity_
     extends AddActivity
 {
 
+    private Handler handler_ = new Handler();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -35,14 +38,14 @@ public final class AddActivity_
     }
 
     private void afterSetContentView_() {
-        etWhy = ((EditText) findViewById(id.etWhy));
-        etWhen = ((EditText) findViewById(id.etWhen));
-        etHow = ((EditText) findViewById(id.etHow));
-        etWhere = ((EditText) findViewById(id.etWhere));
+        etWhat = ((BootstrapEditText) findViewById(id.etWhat));
+        etWhy = ((BootstrapEditText) findViewById(id.etWhy));
+        etWhen = ((BootstrapEditText) findViewById(id.etWhen));
+        etHowMuch = ((BootstrapEditText) findViewById(id.etHowMuch));
+        etWhere = ((BootstrapEditText) findViewById(id.etWhere));
         btnAdd = ((ImageButton) findViewById(id.btnAdd));
-        etWho = ((EditText) findViewById(id.etWho));
-        etWhat = ((EditText) findViewById(id.etWhat));
-        etHowMuch = ((EditText) findViewById(id.etHowMuch));
+        etWho = ((BootstrapEditText) findViewById(id.etWho));
+        etHow = ((BootstrapEditText) findViewById(id.etHow));
         {
             View view = findViewById(id.btnAdd);
             if (view!= null) {
@@ -88,6 +91,24 @@ public final class AddActivity_
 
     public static AddActivity_.IntentBuilder_ intent(Context context) {
         return new AddActivity_.IntentBuilder_(context);
+    }
+
+    @Override
+    public void alterarFontes() {
+        handler_.post(new Runnable() {
+
+
+            @Override
+            public void run() {
+                try {
+                    AddActivity_.super.alterarFontes();
+                } catch (RuntimeException e) {
+                    Log.e("AddActivity_", "A runtime exception was thrown while executing code in a runnable", e);
+                }
+            }
+
+        }
+        );
     }
 
     public static class IntentBuilder_ {

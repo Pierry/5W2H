@@ -1,6 +1,6 @@
 package model;
 
-public class Atividade {
+public class AtividadeModel {
 
 	private long idAtiv;
 	private String what;

@@ -5,14 +5,14 @@ import interfaces.IDAO;
 import java.util.ArrayList;
 import java.util.List;
 
-import model.Atividade;
+import model.AtividadeModel;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 
-public class DAOAtividade extends DAO implements IDAO<Atividade>{
+public class DAOAtividade extends DAO implements IDAO<AtividadeModel>{
 	
 	public static DAO dao;
 	public SQLiteDatabase db;
@@ -23,34 +23,34 @@ public class DAOAtividade extends DAO implements IDAO<Atividade>{
 	}
 	
 	@Override
-	public long Insert(Atividade item) {
+	public long Insert(AtividadeModel item) {
 		ContentValues values = new ContentValues();
-		values.put(Atividade.WHAT, item.getWhat());
-		values.put(Atividade.WHY, item.getWhy());
-		values.put(Atividade.WHERE, item.getWhere());
-		values.put(Atividade.WHEN, item.getWhen());
-		values.put(Atividade.WHO, item.getWho());
-		values.put(Atividade.HOW, item.getHow());
-		values.put(Atividade.HOWMUCH, item.getHowmuch());		
+		values.put(AtividadeModel.WHAT, item.getWhat());
+		values.put(AtividadeModel.WHY, item.getWhy());
+		values.put(AtividadeModel.WHERE, item.getWhere());
+		values.put(AtividadeModel.WHEN, item.getWhen());
+		values.put(AtividadeModel.WHO, item.getWho());
+		values.put(AtividadeModel.HOW, item.getHow());
+		values.put(AtividadeModel.HOWMUCH, item.getHowmuch());		
 		
 		long id = db.insert(ATIVIDADE, "", values);
 		return id;
 	}
 
 	@Override
-	public long Update(Atividade item) {
+	public long Update(AtividadeModel item) {
 		ContentValues values = new ContentValues();
-		values.put(Atividade.WHAT, item.getWhat());
-		values.put(Atividade.WHY, item.getWhy());
-		values.put(Atividade.WHERE, item.getWhere());
-		values.put(Atividade.WHEN, item.getWhen());
-		values.put(Atividade.WHO, item.getWho());
-		values.put(Atividade.HOW, item.getHow());
-		values.put(Atividade.HOWMUCH, item.getHowmuch());
+		values.put(AtividadeModel.WHAT, item.getWhat());
+		values.put(AtividadeModel.WHY, item.getWhy());
+		values.put(AtividadeModel.WHERE, item.getWhere());
+		values.put(AtividadeModel.WHEN, item.getWhen());
+		values.put(AtividadeModel.WHO, item.getWho());
+		values.put(AtividadeModel.HOW, item.getHow());
+		values.put(AtividadeModel.HOWMUCH, item.getHowmuch());
 		
 		String _id = String.valueOf(item.getIdAtiv());
 
-		String where = Atividade.ID + "=?";
+		String where = AtividadeModel.ID + "=?";
 		String[] whereArgs = new String[] { _id };
 
 		int count = db.update(ATIVIDADE, values, where, whereArgs);
@@ -59,24 +59,24 @@ public class DAOAtividade extends DAO implements IDAO<Atividade>{
 	}
 
 	@Override
-	public List<Atividade> Select() {
+	public List<AtividadeModel> Select() {
 		Cursor c = getCursor();
-		List<Atividade> comms = new ArrayList<Atividade>();
+		List<AtividadeModel> comms = new ArrayList<AtividadeModel>();
 		if (c.moveToFirst()) {
 			// Recupera os índices das colunas
-			int idxId = c.getColumnIndex(Atividade.ID);			
-			int idxWhat = c.getColumnIndex(Atividade.WHAT);
-			int idxWhy = c.getColumnIndex(Atividade.WHY);
-			int idxWhere = c.getColumnIndex(Atividade.WHERE);
-			int idxWhen = c.getColumnIndex(Atividade.WHEN);
-			int idxWho = c.getColumnIndex(Atividade.WHO);
-			int idxHow = c.getColumnIndex(Atividade.HOW);
-			int idxHowMuch = c.getColumnIndex(Atividade.HOWMUCH);
+			int idxId = c.getColumnIndex(AtividadeModel.ID);			
+			int idxWhat = c.getColumnIndex(AtividadeModel.WHAT);
+			int idxWhy = c.getColumnIndex(AtividadeModel.WHY);
+			int idxWhere = c.getColumnIndex(AtividadeModel.WHERE);
+			int idxWhen = c.getColumnIndex(AtividadeModel.WHEN);
+			int idxWho = c.getColumnIndex(AtividadeModel.WHO);
+			int idxHow = c.getColumnIndex(AtividadeModel.HOW);
+			int idxHowMuch = c.getColumnIndex(AtividadeModel.HOWMUCH);
 			
 			
 			// Loop até o final
 			do {
-				Atividade com = new Atividade();
+				AtividadeModel com = new AtividadeModel();
 				comms.add(com);
 				// recupera os atributos
 				com.setIdAtiv(c.getLong(idxId));													
@@ -93,12 +93,12 @@ public class DAOAtividade extends DAO implements IDAO<Atividade>{
 	}
 		
 	@Override
-	public Atividade Select(long id) {
-		Cursor c = db.query(true, ATIVIDADE, Atividade.colunas, Atividade.ID + "=" + id, null, null, null, null, null);
+	public AtividadeModel Select(long id) {
+		Cursor c = db.query(true, ATIVIDADE, AtividadeModel.colunas, AtividadeModel.ID + "=" + id, null, null, null, null, null);
 		if (c.getCount() > 0) {
 			// Posiciona no primeiro elemento do cursor
 			c.moveToFirst();
-			Atividade com = new Atividade();
+			AtividadeModel com = new AtividadeModel();
 			// Lê os dados
 			com.setIdAtiv(c.getLong(0));			
 			com.setWhat(c.getString(1));			
@@ -116,7 +116,7 @@ public class DAOAtividade extends DAO implements IDAO<Atividade>{
 	
 	@Override
 	public long Delete(long id) {
-		String where = Atividade.ID + "=?";
+		String where = AtividadeModel.ID + "=?";
 		String _id = String.valueOf(id);
 		String[] whereArgs = new String[] { _id };
 		int count = db.delete(ATIVIDADE, where, whereArgs);
@@ -127,7 +127,7 @@ public class DAOAtividade extends DAO implements IDAO<Atividade>{
 	public Cursor getCursor() {
 		try {
 			// select * from 
-			return db.query(ATIVIDADE, Atividade.colunas, null, null, null, null, null, null);
+			return db.query(ATIVIDADE, AtividadeModel.colunas, null, null, null, null, null, null);
 		} catch (SQLException e) {			
 			return null;
 		}

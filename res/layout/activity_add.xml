@@ -1,112 +1,117 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:background="#EAEAEA"
-    	android:layout_height="match_parent">
-<RelativeLayout
-    android:background="#EAEAEA" 
+    xmlns:bootstrapbutton="http://schemas.android.com/apk/res-auto"
+    xmlns:fontawesometext="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#EAEAEA" >
 
-    <EditText 
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_height="wrap_content"
-        android:maxLines="4"
-        android:lines="2"
-        android:textColor="#006699"
-        android:hint="WHAT"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:id="@+id/etWhat"/>
-    
-    <EditText 
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
         android:layout_height="wrap_content"
-        android:maxLines="4"
-        android:lines="2"
-        android:layout_below="@+id/etWhat"
-        android:textColor="#993300"
-        android:hint="WHY"
-        android:layout_width="match_parent"
-        android:id="@+id/etWhy"/>
-    
-    <EditText 
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_height="wrap_content"
-        android:maxLines="4"
-        android:lines="2"
-        android:layout_below="@+id/etWhy"
-        android:textColor="#009900"
-        android:hint="WHERE"
-        android:layout_width="match_parent"
-        android:id="@+id/etWhere"/>
-    
-    <EditText 
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_height="wrap_content"
-        android:maxLines="4"
-        android:lines="2"
-        android:layout_below="@+id/etWhere"
-        android:textColor="#CC9933"
-        android:hint="WHEN"
-        android:layout_width="match_parent"
-        android:id="@+id/etWhen"/>
-    
-    <EditText 
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_height="wrap_content"
-        android:maxLines="4"
-        android:lines="2"
-        android:layout_below="@+id/etWhen"
-        android:textColor="#333333"
-        android:hint="WHO"
-        android:layout_width="match_parent"
-        android:id="@+id/etWho"/>
+        android:layout_marginBottom="20dp"
+        android:background="#EAEAEA" >
 
-    <EditText 
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_height="wrap_content"
-        android:maxLines="4"
-        android:lines="2"
-        android:layout_below="@+id/etWho"
-        android:textColor="#999999"
-        android:hint="HOW"
-        android:layout_width="match_parent"
-        android:id="@+id/etHow"/>
-    
-    <EditText 
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_height="wrap_content"
-        android:maxLines="4"        
-        android:lines="2"
-        android:layout_below="@+id/etHow"
-        android:textColor="#990066"
-        android:hint="HOW MUCH"
-        android:layout_width="match_parent"
-        android:id="@+id/etHowMuch"/>
-    
-    <ImageButton
-        android:layout_below="@+id/etHowMuch"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="10dp"        
-        android:background="@drawable/selector_add"
-        android:src="@drawable/selector_add"
-        android:layout_height="wrap_content" 
-        android:layout_width="wrap_content"
-        android:id="@+id/btnAdd"/>
-    
-</RelativeLayout>
+        <com.beardedhen.androidbootstrap.BootstrapEditText
+            android:id="@+id/etWhat"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:hint="What"
+            android:textColor="#006699"
+            android:textSize="24sp"
+            bootstrapbutton:be_roundedCorners="true" />
+
+        <com.beardedhen.androidbootstrap.BootstrapEditText
+            android:id="@+id/etWhy"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/etWhat"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:hint="Why"
+            android:textColor="#993300"
+            android:textSize="18sp"
+            bootstrapbutton:be_roundedCorners="true" />
+
+        <com.beardedhen.androidbootstrap.BootstrapEditText
+            android:id="@+id/etWhere"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/etWhy"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:hint="Where"
+            android:textColor="#009900"
+            android:textSize="18sp"
+            bootstrapbutton:be_roundedCorners="true" />
+
+        <com.beardedhen.androidbootstrap.BootstrapEditText
+            android:id="@+id/etWhen"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/etWhere"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:hint="When"
+            android:textColor="#CC9933"
+            android:textSize="18sp"
+            bootstrapbutton:be_roundedCorners="true" />
+
+        <com.beardedhen.androidbootstrap.BootstrapEditText
+            android:id="@+id/etWho"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/etWhen"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:hint="Who"
+            android:textColor="#333333"
+            android:textSize="18sp"
+            bootstrapbutton:be_roundedCorners="true" />
+
+        <com.beardedhen.androidbootstrap.BootstrapEditText
+            android:id="@+id/etHow"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/etWho"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:hint="How"
+            android:textColor="#999999"
+            android:textSize="18sp"
+            bootstrapbutton:be_roundedCorners="true" />
+
+        <com.beardedhen.androidbootstrap.BootstrapEditText
+            android:id="@+id/etHowMuch"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/etHow"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="15dp"
+            android:hint="How Much"
+            android:textColor="#990066"
+            android:textSize="18sp"
+            bootstrapbutton:be_roundedCorners="true" />
+
+        <ImageButton
+            android:id="@+id/btnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etHowMuch"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/selector_add"
+            android:src="@drawable/selector_add" />
+    </RelativeLayout>
+
 </ScrollView>
